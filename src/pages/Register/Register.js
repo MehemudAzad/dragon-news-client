@@ -5,6 +5,8 @@ import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthProvider/AuthProvider';
 
+//=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
 const Register = () => {
     const [error, setError] = useState('');
     const [accepted, setAccepted] = useState(false);
@@ -79,12 +81,13 @@ const Register = () => {
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
-        <Form.Check 
-        type="checkbox" 
-        onClick={handleAccepted}
-        label={<>Accept <Link to="/terms">Terms and conditions</Link></>} />
-      </Form.Group>
-                
+
+                <Form.Check 
+                type="checkbox" 
+                onClick={handleAccepted}
+                label={<>Accept <Link to="/terms">Terms and conditions</Link></>} />
+
+                </Form.Group>              
                 <Button variant="primary" type="submit" disabled = {!accepted }>
                     Register
                 </Button>
